@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pedido</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+        <main>
+          <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="images/logo.jpg" alt="" width="72" height="72">
+            <h2>Formulario de Pedido</h2>
+            <p class="lead">La fecha de tu pedido será coordinada telefónicamente.</p>
+          </div>
+      
+   
+              <h4 class="mb-3 text-center">Tu pedido</h4>
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="tu nombre" value="" required>
+                    <div class="invalid-feedback">
+                      Tu nombre es requerido.
+                    </div>
+                  </div>
+      
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" placeholder="tu apellido" value="" required>
+                    <div class="invalid-feedback">
+                      Tu apellido es requerido.
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="username" class="form-label">Nombre de usuario</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text">@</span>
+                      <input type="text" class="form-control" id="usuario" placeholder="tu usuario" required>
+                    <div class="invalid-feedback">
+                        Tu usuario es requerido.
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email </label>
+                    <input type="email" class="form-control" id="mail" placeholder="tumail@ejemplo.com">
+                    <div class="invalid-feedback">
+                      Por favor ingrese un mail valido 
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="address" class="form-label">Lugar de entrega</label>
+                    <input type="text" class="form-control" id="lugardeentrega" placeholder="Talcahuano 1234" required>
+                    <div class="invalid-feedback">
+                      Por favor ingresa tu dirección.
+                    </div>
+                  </div>
+      
+      
+                  <div class="col-md-5">
+                    <label for="country" class="form-label">Provincia</label>
+                    <select class="form-select" id="provincia" required>
+                      <option value="">Provincia...</option>
+                      <option>Buenos Aires</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor ingresa una provincia valida.
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4">
+                    <label for="state" class="form-label">Localidad</label>
+                    <select class="form-select" id="localidad" required>
+                      <option value="">Localidad...</option>
+                      <option>Bahía Blanca</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor ingresa una localidad valida.
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="zip" class="form-label">Código Postal</label>
+                    <input type="text" class="form-control" id="codpostal" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Código postal es requerido
+                    </div>
+                  </div>
+                </div>
+      
+                <hr class="my-4">
+      
+                     
+                <hr class="my-4">
+      
+                <h4 class="mb-3">Forma de Pago</h4>
+      
+                <div class="my-3">
+                  <div class="form-check">
+                    <input id="tdc" name="formadepago" type="radio" class="form-check-input" checked required>
+                    <label class="form-check-label" for="credito">Tarjeta de Crédito</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="mp" name="formadepago" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="debit">Mercado Pago</label>
+                  </div>
+                </div>
+      
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <label for="tarjtitular" class="form-label">Nombre del Titular de la tarjeta</label>
+                    <input type="text" class="form-control" id="tarjtitular" placeholder="" required>
+                    <small class="text-muted">Nombre como se muestra en la tarjeta</small>
+                    <div class="invalid-feedback">
+                      Nombre de la tarjeta es requerido
+                    </div>
+                  </div>
+      
+                  <div class="col-md-6">
+                    <label for="tarjtnumero" class="form-label">Numero de la tarjeta</label>
+                    <input type="text" class="form-control" id="tarjnumero" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Número de tarjeta de crédito es requerido
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="tarjvto" class="form-label">Fecha de Vencimiento</label>
+                    <input type="text" class="form-control" id="tarjvto" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Fecha de vencimiento es requerido
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="tarjclave" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="tarjclave" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Código de seguridad es requerido
+                    </div>
+                  </div>
+                </div>
+      
+                <hr class="my-4">
+      
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Confirmar pedido</button>
+              </form>
+            </div>
+          </div>
+        </main>
+      
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+          <p class="mb-1">&copy; 2017–2022 Codo a codo</p>
+  </body>
+</html>
